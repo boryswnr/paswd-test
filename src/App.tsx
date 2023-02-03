@@ -10,7 +10,7 @@ function App() {
 
     function handleSubmit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.preventDefault();
-        if (paswd == process.env.REACT_APP_PASSWORD) setAuth(true);
+        if (paswd == import.meta.env.VITE_PASSWORD) setAuth(true);
         setPaswd("");
     }
 
@@ -21,7 +21,7 @@ function App() {
                 <form>
                     <input
                         type="password"
-                        placeholder="type '1234' to access website"
+                        placeholder="type 'abcde' to access website"
                         onChange={(e) => setPaswd(e.target.value)}
                     />
                     <br />
