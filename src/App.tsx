@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { authContext } from "./lib/Contexts";
+import { log } from "console";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -10,6 +11,8 @@ function App() {
 
     function handleSubmit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.preventDefault();
+        console.log(import.meta.env.VITE_PASSWORD);
+
         if (paswd == import.meta.env.VITE_PASSWORD) setAuth(true);
         setPaswd("");
     }
