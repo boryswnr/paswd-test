@@ -10,7 +10,7 @@ function App() {
 
     function handleSubmit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.preventDefault();
-        if (paswd == "1234") setAuth(true);
+        if (paswd == process.env.REACT_APP_PASSWORD) setAuth(true);
         setPaswd("");
     }
 
